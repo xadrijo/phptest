@@ -2,15 +2,17 @@
 
 use GuzzleHttp\Client;
 
-Route::get('/', function() {
+Route::get('/{id}', function($id) {
     
     $client = new Client([
-	    'base_uri' => 'http://jsonplaceholder.typicode.com/',
-	    // You can set any number of default request options.
+	    'base_uri' => 'https://graph.facebook.com/',
+
 	    'timeout'  => 2.0,
 	]);
 
-	$response = $client->request('GET', 'posts');
+	$token = 'EAACEdEose0cBADlSLnkWlxmZA7G6mU8uVKd9uscM1OpCxZB7y4rKZBx3WM7JtibQjvAW97cOyhu9FnanDVAnBwpR0u9GcSxpe44qyDCzsjuxx6ZAgU3bBVrdYeNEfMXMrgkUegdmYYJwRZBuwbyc94gBICPdENLoyry7YY7tGFkqTNd7i8GIKjZAv5uDjSdRoZD';
 
-	return json_decode( $response->getBody()->getContents() );
+	$response = $client->request('GET', $id . '?access_token=' . $token);
+	return $response->getBody();
+
 });
