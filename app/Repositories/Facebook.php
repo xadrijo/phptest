@@ -19,7 +19,7 @@ class Facebook
 	{
 		$response = $this->client->request('GET', $id . '?access_token=' . $this->token);
 
-		return $response->getBody();
+		return $response->getBody();	
 	}
 
 }
