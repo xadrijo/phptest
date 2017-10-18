@@ -1,4 +1,16 @@
 <?php
 
-// Request GET /profile/facebook/123456
-Route::get('/profile/facebook/{id}', 'FacebookController@show');
+use GuzzleHttp\Client;
+
+Route::get('/', function() {
+    
+    $client = new Client([
+	    'base_uri' => 'http://jsonplaceholder.typicode.com/',
+	    // You can set any number of default request options.
+	    'timeout'  => 2.0,
+	]);
+
+	$response = $client->request('GET', 'posts');
+
+	return json_decode( $response->getBody()->getContents() );
+});
