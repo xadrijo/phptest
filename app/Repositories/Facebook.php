@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class Facebook
 {
-	private $token = 'EAACEdEose0cBADlSLnkWlxmZA7G6mU8uVKd9uscM1OpCxZB7y4rKZBx3WM7JtibQjvAW97cOyhu9FnanDVAnBwpR0u9GcSxpe44qyDCzsjuxx6ZAgU3bBVrdYeNEfMXMrgkUegdmYYJwRZBuwbyc94gBICPdENLoyry7YY7tGFkqTNd7i8GIKjZAv5uDjSdRoZD';
+	private $token = 'EAACEdEose0cBAJlzIrCUUYot1gGarq9K3j2PGvfUZAeyXFnRoiQfl0axCUohiLgct9TRHjIZB3pa25OKH3hWYhZCXkjdW8wdg4ufXmhGRZBZBhaQvcFrNDGAyVCind1d1Mhtp5podtvAtZCsre9qMZARHPHMKs1Dx3rYIyESI5oGwDeaBCZBf6r5vO5JruhVIWqdAlZCPscGcJ1ywfN3TeYPQZA1AY9GGmhzcBv71Bo8Ao4QZDZD';
 
 	public function __construct(Client $client)
 	{
